@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\backend"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"emmet.preferences": {
+		
+		},
+		"eslint.lintTask.enable": true
+	}
+}
+

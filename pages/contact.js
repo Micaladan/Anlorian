@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import TransparentTextBox from '../components/styles/TransparentTextBox';
 
 export default class contact extends Component {
   render() {
     return (
-      <div>
+      <TransparentTextBox>
         <h1>This is the Contact page!</h1>
-        <a href="/">Back to the Home Page</a>
-      </div>
+      </TransparentTextBox>
     );
   }
 }

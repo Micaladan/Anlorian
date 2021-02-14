@@ -3,11 +3,17 @@ import Link from 'next/link';
 
 const UlStyles = styled.ul`
   list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+`;
+
+const NavStyles = styled.nav`
+  width: 100%;
 `;
 
 export default function Nav() {
   return (
-    <nav>
+    <NavStyles>
       <UlStyles>
         <li>
           <Link href="/about">About Us</Link>
@@ -19,6 +25,6 @@ export default function Nav() {
           <Link href="/contact">Contact Us</Link>
         </li>
       </UlStyles>
-    </nav>
+    </NavStyles>
   );
 }

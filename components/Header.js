@@ -8,9 +8,10 @@ const Logo = styled.h1`
   position: relative;
   z-index: 2;
   transform: skew(-14deg);
+  letter-spacing: 0.7rem;
+  font-family: 'Berkshire Swash', cursive;
   a {
     color: white;
-    text-decoration: none;
   }
 `;
 
@@ -21,7 +22,7 @@ export default function Header() {
     <HeaderStyles>
       <div>
         <Logo>
-          <Link href="/">Anlorian</Link>
+          <Link href="/"> &#127922; Anlorian</Link>
         </Logo>
       </div>
       <Nav />

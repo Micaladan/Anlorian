@@ -15,12 +15,12 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
-          <title>Anlorian</title>
           <link rel="icon" href="/favicon.ico" />
+
           <link
-            href="https://fonts.googleapis.com/css2?family=Niconne&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
             rel="stylesheet"
-          />
+          ></link>
         </Head>
         <body>
           <Main />

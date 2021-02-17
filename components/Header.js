@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import Nav from './Nav';
 
 const Logo = styled.h1`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   font-size: 4rem;
   z-index: 2;
   letter-spacing: 0.7rem;
@@ -27,7 +30,8 @@ export default function Header() {
     <HeaderStyles>
       <div>
         <Logo>
-          <Link href="/">Anlorian</Link>&#127922; &#127922; &#127922;
+          <Link href="/">Anlorian</Link>
+          &#127922; &#127922; &#127922;
         </Logo>
       </div>
       <Nav />

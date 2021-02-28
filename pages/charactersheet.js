@@ -56,7 +56,7 @@ export default function CharacterSheet() {
             <tr>
               <td>Offensive Strength</td>
               <td>
-                <input type="number" value="10" />
+                <input type="number" placeholder="10" />
               </td>
               <td>
                 Health <p>(max = 8)</p>
@@ -65,29 +65,29 @@ export default function CharacterSheet() {
             <tr>
               <td>Defensive Strength</td>
               <td>
-                <input type="number" value="10" />
+                <input type="number" placeholder="10" />
               </td>
 
               <td rowSpan="2">
-                <input type="number" value="8" />
+                <input type="number" placeholder="8" />
               </td>
             </tr>
             <tr>
               <td>Will</td>
               <td>
-                <input type="number" value="10" />
+                <input type="number" placeholder="10" />
               </td>
             </tr>
             <tr>
               <td>Tenacity</td>
               <td>
-                <input type="number" value="10" />
+                <input type="number" placeholder="10" />
               </td>
             </tr>
             <tr>
               <td>Energy</td>
               <td>
-                <input type="number" value="10" />
+                <input type="number" placeholder="10" />
               </td>
 
               <td>Attack Dice</td>
@@ -95,7 +95,7 @@ export default function CharacterSheet() {
             <tr>
               <td>Resolve</td>
               <td>
-                <input type="number" value="10" />
+                <input type="number" placeholder="10" />
               </td>
 
               <td>
@@ -105,13 +105,13 @@ export default function CharacterSheet() {
             <tr>
               <td>Offensive Body</td>
               <td>
-                <input type="number" value="10" />
+                <input type="number" placeholder="10" />
               </td>
             </tr>
             <tr>
               <td>Defensive Body</td>
               <td>
-                <input type="number" value="10" />
+                <input type="number" placeholder="10" />
               </td>
 
               <td>Damage Dice</td>
@@ -119,7 +119,7 @@ export default function CharacterSheet() {
             <tr>
               <td>Faith</td>
               <td>
-                <input type="number" value="10" />
+                <input type="number" placeholder="10" />
               </td>
 
               <td>

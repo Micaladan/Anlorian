@@ -52,10 +52,10 @@ a:hover {
 button {
   font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
 }
+
 `;
 
 const InnerStyles = styled.div`
-  max-width: var(--maxWidth);
   margin: 0 1rem;
   position: relative;
   min-height: 100vh;

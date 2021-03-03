@@ -16,7 +16,7 @@ const UlStyles = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  color: black;
+  color: var(--black);
   list-style: none;
   width: 100%;
 `;
@@ -27,13 +27,13 @@ export default function Nav() {
       <Hamburger />
       <UlStyles>
         <li>
-          <Link href="/about">About Us</Link>
+          <Link href="/about">About</Link>
         </li>
         <li>
           <Link href="/blog">Blog</Link>
         </li>
         <li>
-          <Link href="/contact">Contact Us</Link>
+          <Link href="/contact">Contact</Link>
         </li>
         <li>
           <Link href="/charactersheet">Character Sheet</Link>

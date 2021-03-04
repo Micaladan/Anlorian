@@ -8,6 +8,11 @@ const ContainerStyles = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    font-size: 0.8rem;
+    input {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -23,6 +28,9 @@ const EmailFormStyles = styled.h3`
   justify-content: center;
   background-color: rgba(244, 162, 97, 0.8);
   border: 2px solid var(--lightGrey);
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `;
 const InputStyles = styled.input`
   font-size: 2rem;
@@ -42,6 +50,9 @@ const ButtonStyles = styled.button`
   font-weight: 500;
   background-color: var(--lightGrey);
   border: 2px solid black;
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export default function Home() {

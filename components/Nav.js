@@ -1,31 +1,32 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import Hamburger from './Hamburger';
-
 import 'react-responsive-modal/styles.css';
 
 const NavStyles = styled.nav`
   width: 100%;
   display: flex;
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
+  flex-direction: row;
+  background-color: rgba(98, 0, 151, 0.8);
 `;
 
 const UlStyles = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  color: var(--black);
   list-style: none;
   width: 100%;
+  a {
+    color: var(--offWhite);
+  }
 `;
 
 export default function Nav() {
   return (
     <NavStyles>
-      <Hamburger />
       <UlStyles>
+        <li>
+          <Link href="/">Anlorian</Link>
+        </li>
         <li>
           <Link href="/about">About</Link>
         </li>

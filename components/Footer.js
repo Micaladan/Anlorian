@@ -4,8 +4,8 @@ const FooterStyles = styled.footer`
   bottom: 0;
   height: 5rem;
   width: 100%;
-  color: white;
-  background-color: var(--black);
+  color: var(--offWhite);
+  background-color: rgb(0, 0, 0);
   padding: 1.5 rem;
   display: flex;
   align-items: center;

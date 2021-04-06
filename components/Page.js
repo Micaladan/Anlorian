@@ -14,35 +14,33 @@ const GlobalStyles = createGlobalStyle`
 
 html {
   --red: #ff0000;
+  --darkRed: rgba(255, 40, 30);
   --black: #342e2e;
   --grey: #3a3a3a;
   --gray: var(--grey);
   --lightGrey: #e1e1e1;
   --lightGray: var(--lightGrey);
-  --offWhite: #ededed;
-  --orange: rgb(244, 162, 97);
+  --offWhite: rgb(226, 218, 218);
+  --orange: rgb(253, 186, 49);
+  --purple: rgb(98, 0, 151);
+  --Indigo: rgba(55, 0, 117);
   --maxWidth: 1200px;
   --bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09);'
   box-sizing: border-box;
+  font-size: 16px;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  padding: 0;
-  margin: 0;
-  font-size: 1.5rem;
-  line-height: 2;
-  background-color: var(--black);
-
-  background-image: url('https://images.unsplash.com/photo-1510218830377-2e994ea9087d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80');
-  background-size: cover;
-  background-position: center;
-  /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%231f25f9' fill-opacity='0.55'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
-  color: white;
-
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
 }
 
 a {
@@ -58,10 +56,99 @@ button {
   font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
 }
 
+.header{
+height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 40, 30, 0.7),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url('https://images.unsplash.com/photo-1508931133503-b1944a4ecdd5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
+  background-size: cover;
+  background-position: stretch;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 14.7px;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 `;
 
 const InnerStyles = styled.div`
-  margin: 0 1rem;
   position: relative;
   min-height: 100vh;
   display: flex;

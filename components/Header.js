@@ -2,11 +2,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="logo-box">
-        <img
-          className="logo"
-          src="../public/AnlorianLogo.png"
-          alt="Anlorian Logo"
-        />
+        <img className="logo" src="" alt="Anlorian Logo" />
       </div>
 
       <div className="text-box">

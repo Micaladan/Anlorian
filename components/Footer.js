@@ -6,10 +6,11 @@ const FooterStyles = styled.footer`
   width: 100%;
   color: var(--offWhite);
   background-color: rgb(0, 0, 0);
-  padding: 1.5 rem;
+  padding: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 3rem;
 `;
 
 export default function Footer() {

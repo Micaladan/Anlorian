@@ -17,13 +17,10 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
-            rel="stylesheet"
-          />
-          <link
             href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
             rel="stylesheet"
           />
+          <link rel="stylesheet" href="/css/style.css" />
         </Head>
         <body>
           <Main />

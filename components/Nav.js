@@ -1,45 +1,46 @@
-import styled from 'styled-components';
 import Link from 'next/link';
-import 'react-responsive-modal/styles.css';
-
-const NavStyles = styled.nav`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  background-color: rgba(98, 0, 151, 0.8);
-`;
-
-const UlStyles = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  list-style: none;
-  width: 100%;
-  a {
-    color: var(--offWhite);
-  }
-`;
 
 export default function Nav() {
   return (
-    <NavStyles>
-      <UlStyles>
-        <li>
-          <Link href="/">Anlorian</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/blog">Blog</Link>
-        </li>
-        <li>
-          <Link href="/contact">Contact</Link>
-        </li>
-        <li>
-          <Link href="/charactersheet">Character Sheet</Link>
-        </li>
-      </UlStyles>
-    </NavStyles>
+    <div className="navigation">
+      <input
+        type="checkbox"
+        className="navigation__checkbox"
+        id="navi-toggle"
+      />
+      <label htmlFor="navi-toggle" className="navigation__button">
+        <span className="navigation__icon">&nbsp;</span>
+      </label>
+      <div className="navigation__background">&nbsp;</div>
+      <nav className="navigation__nav">
+        <ul className="navigation__list">
+          <li className="navigation__item">
+            <Link href="/">
+              <a className="navigation__link">Home</a>
+            </Link>
+          </li>
+          <li className="navigation__item">
+            <Link href="/about">
+              <a className="navigation__link">About Anlorian</a>
+            </Link>
+          </li>
+          <li className="navigation__item">
+            <Link href="/blog">
+              <a className="navigation__link">Development Blog</a>
+            </Link>
+          </li>
+          <li className="navigation__item">
+            <Link href="/contact">
+              <a className="navigation__link">Contact Us</a>
+            </Link>
+          </li>
+          <li className="navigation__item">
+            <Link href="/charactersheet">
+              <a className="navigation__link">Character Sheet</a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }

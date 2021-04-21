@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Header from './Header';
-import Footer from './Footer';
 
 const InnerStyles = styled.div`
   position: relative;
@@ -14,9 +12,7 @@ const InnerStyles = styled.div`
 export default function Page({ children }) {
   return (
     <div>
-      <Header />
       <InnerStyles>{children}</InnerStyles>
-      <Footer />
     </div>
   );
 }

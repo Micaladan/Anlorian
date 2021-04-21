@@ -7,12 +7,11 @@ export default function Home() {
 
       <div className="bg-video">
         <video className="bg-video__content" autoPlay muted loop>
-          <source src="bonfire-sparks.mp4" type="video/mp4" />
           <source
-            src="https://storage.coverr.co/t/jeBdF8v02KKHOfwl1VgHkQNxXMDVEh01no"
-            type="video/webm"
+            src="https://storage.coverr.co/videos/Z9kMkdAolRV3t00RD02wl7RCovq01O4fUP02?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjE5MDQ1NzY0fQ.BVCsuyo1C7_6Bmmb3EEowu0UyVPgrDEbmTsQeNcBYMY"
+            type="video/mp4"
           />
-          Your browser is not supported!
+          Unable to show video.
         </video>
       </div>
 

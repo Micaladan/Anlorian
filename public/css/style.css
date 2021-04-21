@@ -672,7 +672,7 @@ body {
 
 .section-book {
   padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, rgba(255, 152, 145, 0.8), rgba(178, 34, 24, 0.8)); }
+  background-image: linear-gradient(to bottom left, rgba(0, 0, 0, 0.8), rgba(178, 34, 24, 0.8)); }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("https://images.unsplash.com/photo-1549056572-75914d5d5fd4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80");

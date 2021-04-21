@@ -9,7 +9,7 @@ export default function Home() {
         <video className="bg-video__content" autoPlay muted loop>
           <source src="bonfire-sparks.mp4" type="video/mp4" />
           <source
-            src="https://coverr.co/videos/bonfire-sparks-CCbPSIBl31"
+            src="https://anlorian-zeta.vercel.app/bonefire-sparks.mp4"
             type="video/webm"
           />
           Your browser is not supported!

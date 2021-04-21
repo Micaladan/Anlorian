@@ -2,14 +2,14 @@ import Header from '../components/Header';
 
 export default function Home() {
   return (
-    <div>
+    <div className="home-container">
       <Header />
 
       <div className="bg-video">
         <video className="bg-video__content" autoPlay muted loop>
           <source src="bonfire-sparks.mp4" type="video/mp4" />
           <source
-            src="https://anlorian-zeta.vercel.app/bonefire-sparks.mp4"
+            src="https://storage.coverr.co/t/jeBdF8v02KKHOfwl1VgHkQNxXMDVEh01no"
             type="video/webm"
           />
           Your browser is not supported!

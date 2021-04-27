@@ -1,4 +1,3 @@
-import '../public/css/style.css';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 import Page from '../components/Page';

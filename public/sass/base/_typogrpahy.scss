@@ -9,13 +9,11 @@ body {
   color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 6rem;
-
   &--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 3.5rem;
+    letter-spacing: 3.3rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -25,7 +23,7 @@ body {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 1.7rem;
+    letter-spacing: 1.4rem;
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -39,8 +37,8 @@ body {
   display: inline-block;
   background-image: linear-gradient(
     to right,
-    $color-primary-light,
-    $color-primary-dark
+    $color-primary,
+    $color-primary-light
   );
   background-clip: text;
   -webkit-background-clip: text;

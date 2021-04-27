@@ -1,6 +1,10 @@
 import Link from 'next/link';
 
 export default function Nav() {
+  function uncheck() {
+    document.getElementById('navi-toggle').checked = false;
+  }
+
   return (
     <div className="navigation">
       <input
@@ -16,27 +20,37 @@ export default function Nav() {
         <ul className="navigation__list">
           <li className="navigation__item">
             <Link href="/">
-              <a className="navigation__link">Home</a>
+              <a onClick={uncheck} className="navigation__link">
+                Home
+              </a>
             </Link>
           </li>
           <li className="navigation__item">
             <Link href="/about">
-              <a className="navigation__link">About Anlorian</a>
+              <a onClick={uncheck} role="link" className="navigation__link">
+                About Anlorian
+              </a>
             </Link>
           </li>
           <li className="navigation__item">
             <Link href="/blog">
-              <a className="navigation__link">Development Blog</a>
+              <a onClick={uncheck} className="navigation__link">
+                Development Blog
+              </a>
             </Link>
           </li>
           <li className="navigation__item">
             <Link href="/contact">
-              <a className="navigation__link">Contact Us</a>
+              <a onClick={uncheck} className="navigation__link">
+                Contact Us
+              </a>
             </Link>
           </li>
           <li className="navigation__item">
             <Link href="/charactersheet">
-              <a className="navigation__link">Character Sheet</a>
+              <a onClick={uncheck} className="navigation__link">
+                Character Sheet
+              </a>
             </Link>
           </li>
         </ul>

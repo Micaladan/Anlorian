@@ -7,12 +7,12 @@
     font-size: $default-font-size;
     padding: 1.5rem 2rem;
     border-radius: 3px;
-    background-color: rgba($color-white, 0.5);
+    background-color: rgba($color-white, 7);
     border: none;
     font-family: inherit;
     color: inherit;
     border-bottom: 3px solid transparent;
-    width: 90%;
+    width: 100%;
     transition: all 0.5s;
 
     &:focus {

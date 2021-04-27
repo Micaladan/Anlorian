@@ -15,15 +15,23 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8553DDBGM1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8553DDBGM1');
-</script>
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-8553DDBGM1"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8553DDBGM1', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
 
           <link rel="icon" href="/favicon.ico" />
           <link

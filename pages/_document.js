@@ -15,6 +15,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
@@ -36,6 +40,10 @@ export default class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <link
             href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap"
             rel="stylesheet"
           />
           <link rel="stylesheet" href="/css/style.css" />

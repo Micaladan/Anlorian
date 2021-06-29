@@ -1,0 +1,16 @@
+.character-sheet {
+  // background-image: url('../fancy-paper.jpg');
+  width: 73rem;
+  height: 96rem;
+  color: $color-black;
+  font-size: 3rem;
+  line-height: 1;
+  // font-family: 'Almendra Display', cursive;
+  // font-weight: 700;
+  display: flex;
+  overflow: auto;
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+}

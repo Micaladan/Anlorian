@@ -44,6 +44,15 @@
     }
   }
 
+  &--black {
+    background-color: $color-black;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-black;
+    }
+  }
+
   &:active,
   &:focus {
     outline: none;

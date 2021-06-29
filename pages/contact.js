@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
-import TransparentTextBox from '../components/styles/TransparentTextBox';
-
-export default class contact extends Component {
-  render() {
-    return (
-      <TransparentTextBox>
-        <h1>This is the Contact page!</h1>
-      </TransparentTextBox>
-    );
-  }
+export default function contact() {
+  return (
+    <div>
+      <h1 className="heading-primary">This is the Contact page!</h1>
+      <p className="heading-primary">
+        For now contact our fearless leader Mike Shrock{' '}
+      </p>
+    </div>
+  );
 }

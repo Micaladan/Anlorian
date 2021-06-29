@@ -10,7 +10,7 @@
     background-color: rgba($color-white, 7);
     border: none;
     font-family: inherit;
-    color: inherit;
+    color: $color-black;
     border-bottom: 3px solid transparent;
     width: 100%;
     transition: all 0.5s;
@@ -37,6 +37,7 @@
     margin-top: 0.7rem;
     display: block;
     transition: all 0.3s;
+    color: $color-white;
   }
 
   &__input:placeholder-shown + &__label {

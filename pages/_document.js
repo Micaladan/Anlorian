@@ -15,10 +15,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

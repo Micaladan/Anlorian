@@ -19,6 +19,9 @@
     position: absolute;
     top: 4rem;
     left: 4rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
   }
 
   &__logo {

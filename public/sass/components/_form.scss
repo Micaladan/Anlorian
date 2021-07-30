@@ -22,7 +22,7 @@
     }
 
     &:focus:invalid {
-      border-bottom: $color-secondary-dark 3px solid;
+      border: orange 5px solid;
     }
 
     &::-webkit-input-placeholder {

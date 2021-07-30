@@ -50,6 +50,9 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden; }
 
+fieldset {
+  border: 0; }
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -369,7 +372,7 @@ body {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #ff3322; }
   .form__input:focus:invalid {
-    border-bottom: #ff7730 3px solid; }
+    border: orange 5px solid; }
   .form__input::-webkit-input-placeholder {
     color: #999; }
 

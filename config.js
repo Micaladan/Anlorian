@@ -2,5 +2,5 @@
 
 export const endpoint = `http://localhost:3000/api/graphql`;
 // Remember no / at the end
-export const prodEndpoint = `https://api.anlorian.io/api/graphql`;
+export const prodEndpoint = `https://api.anlorian.io`;
 export const perPage = 4;

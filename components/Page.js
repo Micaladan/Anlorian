@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Header from '../components/Header';
+import Header from './Header';
 
 const InnerStyles = styled.div`
   position: relative;

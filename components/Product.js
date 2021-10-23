@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import formatMoney from '../lib/formatMoney';
+import DeleteProduct from './DeleteProduct';
 
 export default function Product({ product }) {
   return (
@@ -8,13 +9,28 @@ export default function Product({ product }) {
         src={product?.photo?.image?.publicUrlTransformed}
         alt={product.name}
       />
-      <p className="products__title">
+      <div className="products__title">
         <Link href={`/product/${product.id}`}>
           <p className="products__title--link">{product.name}</p>
         </Link>
-      </p>
+      </div>
       <span className="products__price">{formatMoney(product.price)}</span>
       <p className="products__description">{product.description}</p>
+      <div className="buttonList">
+        <Link
+          href={{
+            pathname: 'update',
+            query: {
+              id: product.id,
+            },
+          }}
+        >
+          Edit
+        </Link>
+        <DeleteProduct key={product.id} id={product.id}>
+          Delete
+        </DeleteProduct>
+      </div>
     </div>
   );
 }

@@ -33,6 +33,13 @@ export default function Nav() {
             </Link>
           </li>
           <li className="navigation__item">
+            <Link href="/products">
+              <a onClick={uncheck} role="link" className="navigation__link">
+                Products
+              </a>
+            </Link>
+          </li>
+          <li className="navigation__item">
             <Link href="/blog">
               <a onClick={uncheck} className="navigation__link">
                 Development Blog

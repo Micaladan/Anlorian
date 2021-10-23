@@ -37,6 +37,7 @@ export default function CreateProduct() {
     price: 34234,
     description: 'These are the best shoes!',
   });
+  console.log(inputs);
   const [createProduct, { loading, error, data }] = useMutation(
     CREATE_PRODUCT_MUTATION,
     {

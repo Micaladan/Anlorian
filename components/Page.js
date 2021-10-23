@@ -8,6 +8,13 @@ const InnerStyles = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 `;
 
 export default function Page({ children }) {

@@ -1,5 +1,4 @@
 export default function Header() {
-  console.log(window.document);
   return (
     <header className="header">
       <div className="header__logo-box">

@@ -1,9 +1,13 @@
 import Link from 'next/link';
+import SignOut from './SignOut';
+import { useUser } from './User';
+
+export function uncheck() {
+  document.getElementById('navi-toggle').checked = false;
+}
 
 export default function Nav() {
-  function uncheck() {
-    document.getElementById('navi-toggle').checked = false;
-  }
+  const user = useUser();
 
   return (
     <div className="navigation">
@@ -18,7 +22,25 @@ export default function Nav() {
       <div className="navigation__background">&nbsp;</div>
       <nav className="navigation__nav">
         <ul className="navigation__list">
-          <li className="navigation__item">
+          {/* Show this if not logged in */}
+          {!user && (
+            <>
+              <li className="navigation__item">
+                <Link href="/signin">
+                  <a onClick={uncheck} className="navigation__link">
+                    Sign In
+                  </a>
+                </Link>
+                <Link href="/register">
+                  <a onClick={uncheck} className="navigation__link">
+                    Register
+                  </a>
+                </Link>
+              </li>
+            </>
+          )}
+
+          <li>
             <Link href="/">
               <a onClick={uncheck} className="navigation__link">
                 Home
@@ -32,13 +54,7 @@ export default function Nav() {
               </a>
             </Link>
           </li>
-          <li className="navigation__item">
-            <Link href="/products">
-              <a onClick={uncheck} role="link" className="navigation__link">
-                Products
-              </a>
-            </Link>
-          </li>
+
           <li className="navigation__item">
             <Link href="/blog">
               <a onClick={uncheck} className="navigation__link">
@@ -53,13 +69,29 @@ export default function Nav() {
               </a>
             </Link>
           </li>
-          <li className="navigation__item">
-            <Link href="/charactersheet">
-              <a onClick={uncheck} className="navigation__link">
-                Character Sheet
-              </a>
-            </Link>
-          </li>
+          {/* Show these only if logged in */}
+          {user && (
+            <>
+              <li className="navigation__item">
+                <Link href="/products">
+                  <a onClick={uncheck} role="link" className="navigation__link">
+                    Products
+                  </a>
+                </Link>
+              </li>
+              <li className="navigation__item">
+                <Link href="/charactersheet">
+                  <a onClick={uncheck} className="navigation__link">
+                    Character Sheet
+                  </a>
+                </Link>
+              </li>
+
+              <li className="navigation__item">
+                <SignOut></SignOut>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </div>

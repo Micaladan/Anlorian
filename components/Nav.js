@@ -31,7 +31,7 @@ export default function Nav() {
                     Sign In
                   </a>
                 </Link>
-                <Link href="/register">
+                <Link href="/signin">
                   <a onClick={uncheck} className="navigation__link">
                     Register
                   </a>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useCart } from '../lib/cartState';
 import SignOut from './SignOut';
 import { useUser } from './User';
 
@@ -8,7 +9,7 @@ export function uncheck() {
 
 export default function Nav() {
   const user = useUser();
-
+  const { toggleCart } = useCart();
   return (
     <div className="navigation">
       <input
@@ -86,7 +87,13 @@ export default function Nav() {
                   </a>
                 </Link>
               </li>
-
+              <li className="navigation__item">
+                <Link href="javascript:void(0)">
+                  <a onClick={toggleCart} className="navigation__link">
+                    Toggle My Cart
+                  </a>
+                </Link>
+              </li>
               <li className="navigation__item">
                 <SignOut></SignOut>
               </li>

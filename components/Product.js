@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import formatMoney from '../lib/formatMoney';
+import AddToCart from './AddToCart';
 import DeleteProduct from './DeleteProduct';
 
 export default function Product({ product }) {
@@ -27,6 +28,7 @@ export default function Product({ product }) {
         >
           Edit
         </Link>
+        <AddToCart id={product.id} />
         <DeleteProduct key={product.id} id={product.id}>
           Delete
         </DeleteProduct>

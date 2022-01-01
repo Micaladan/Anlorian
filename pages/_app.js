@@ -12,15 +12,18 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 // TODO: Swap with our own
 import '../components/styles/nprogress.css';
+import { CartStateProvider } from '../lib/cartState';
 
 function MyApp({ Component, pageProps, apollo }) {
   return (
     <ApolloProvider client={apollo}>
-      <Page>
-        <Nav />
-        <Cart />
-        <Component {...pageProps} />
-      </Page>
+      <CartStateProvider>
+        <Page>
+          <Nav />
+          <Cart />
+          <Component {...pageProps} />
+        </Page>
+      </CartStateProvider>
     </ApolloProvider>
   );
 }

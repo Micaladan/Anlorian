@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useCart } from '../lib/cartState';
+import CartCount from './CartCount';
 import SignOut from './SignOut';
 import { useUser } from './User';
 
@@ -90,7 +91,13 @@ export default function Nav() {
               <li className="navigation__item">
                 <Link href="javascript:void(0)">
                   <a onClick={toggleCart} className="navigation__link">
-                    Toggle My Cart
+                    Toggle Cart
+                    <CartCount
+                      count={user.cart.reduce(
+                        (tally, cartItem) => tally + cartItem.quantity,
+                        0
+                      )}
+                    />
                   </a>
                 </Link>
               </li>

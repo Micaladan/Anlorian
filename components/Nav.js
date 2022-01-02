@@ -89,7 +89,7 @@ export default function Nav() {
                 </Link>
               </li>
               <li className="navigation__item">
-                <Link href="javascript:void(0)">
+                <Link href="/products">
                   <a onClick={toggleCart} className="navigation__link">
                     Toggle Cart
                     <CartCount

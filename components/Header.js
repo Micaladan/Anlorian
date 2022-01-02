@@ -1,3 +1,5 @@
+import Search from './Search';
+
 export default function Header() {
   return (
     <header className="header">

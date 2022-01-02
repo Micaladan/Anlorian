@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Header from './Header';
+import Search from './Search';
 
 const InnerStyles = styled.div`
   position: relative;
@@ -20,6 +21,7 @@ const InnerStyles = styled.div`
 export default function Page({ children }) {
   return (
     <div>
+      <Search />
       <Header />
       <InnerStyles>{children}</InnerStyles>
     </div>

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Product/> Renders and matches the snapshot 1`] = `
+<div>
+  <div
+    class="products__item"
+  >
+    <img
+      alt="dogs are best"
+      src="dog.jpg"
+    />
+    <div
+      class="products__title"
+    >
+      <p
+        class="products__title--link"
+      >
+        dogs are best
+      </p>
+    </div>
+    <span
+      class="products__price"
+    >
+      $50
+    </span>
+    <p
+      class="products__description"
+    >
+      dogs
+    </p>
+    <div
+      class="buttonList"
+    >
+      <a
+        href="/update?id=abc123"
+      >
+        Edit
+      </a>
+      <button
+        type="button"
+      >
+        Add 
+         to Cart
+      </button>
+      <button
+        type="button"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+`;

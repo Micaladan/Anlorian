@@ -5,12 +5,10 @@ import DisplayError from './ErrorMessage';
 const CREATE_EMAIL_MUTATION = gql`
   mutation CREATE_EMAIL_MUTATION(
     #which variables are getting passed in
-    $name: String!
     $email: String!
   ) {
-    createEmail(data: { name: $name, email: $email }) {
+    createEmail(data: { email: $email }) {
       id
-      name
       email
     }
   }
@@ -18,7 +16,6 @@ const CREATE_EMAIL_MUTATION = gql`
 
 export default function CaptureEmail() {
   const { inputs, handleChange, clearForm } = useForm({
-    name: '',
     email: '',
   });
 
@@ -48,21 +45,6 @@ export default function CaptureEmail() {
             className="form"
           >
             <fieldset disabled={loading} aria-busy={loading}>
-              <div className="form__group">
-                <input
-                  type="text"
-                  className="form__input"
-                  placeholder="Full Name"
-                  id="name"
-                  name="name"
-                  value={inputs.name}
-                  onChange={handleChange}
-                  required
-                />
-                <label htmlFor="name" className="form__label">
-                  Full Name
-                </label>
-              </div>
               <div className="form__group">
                 <input
                   type="email"

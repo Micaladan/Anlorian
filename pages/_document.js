@@ -60,7 +60,17 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap"
             rel="stylesheet"
           />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Shojumaru&display=swap"
+            rel="stylesheet"
+          />
           <link rel="stylesheet" href="/css/style.css" />
+          <script
+            src="https://kit.fontawesome.com/dd46a1f137.js"
+            crossorigin="anonymous"
+          ></script>
         </Head>
         <body>
           <Main />

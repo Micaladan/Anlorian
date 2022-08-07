@@ -19,8 +19,8 @@ function MyApp({ Component, pageProps, apollo }) {
     <ApolloProvider client={apollo}>
       <CartStateProvider>
         <Page>
-          <Nav />
-          <Cart />
+          {/* <Nav />
+          <Cart /> */}
           <Component {...pageProps} />
         </Page>
       </CartStateProvider>

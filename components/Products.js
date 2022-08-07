@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import { perPage } from '../config';
 import Product from './Product';
+
 export const ALL_PRODUCTS_QUERY = gql`
   query ALL_PRODUCTS_QUERY($skip: Int = 0, $first: Int) {
     allProducts(first: $first, skip: $skip) {
@@ -30,18 +31,12 @@ export default function Products({ page }) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
   return (
-    <div>
-      <h1 className="heading-primary--main heading-primary u-center-text">
-        Products
-      </h1>
-
-      <div className="products">
-        {data.allProducts.map((product) => (
-          <div key={product.id}>
-            <Product key={product.id} product={product} />
-          </div>
-        ))}
-      </div>
+    <div className="products">
+      {data.allProducts.map((product) => (
+        <div key={product.id}>
+          <Product key={product.id} product={product} />
+        </div>
+      ))}
     </div>
   );
 }

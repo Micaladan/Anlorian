@@ -14,7 +14,7 @@ export default function signin() {
   return (
     <GridStyles>
       <SignIn></SignIn>
-      {/* Hiding register component for now
+      {/* Hiding register component  for now
       <Register></Register> */}
       <RequestReset></RequestReset>
     </GridStyles>

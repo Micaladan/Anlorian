@@ -5,7 +5,7 @@ const Dot = styled.div`
   background: white;
   color: black;
   float: right;
-  font-size: 50%;
+  font-size: 100%;
   font-weight: 800;
   border-radius: 50%;
   padding: 1rem;
@@ -20,7 +20,7 @@ const AnimationStyles = styled.span`
   position: relative;
   .count {
     display: block;
-    position: relative;
+    position: absolute;
     transition: transform 0.4s;
     backface-visibility: hidden;
   }

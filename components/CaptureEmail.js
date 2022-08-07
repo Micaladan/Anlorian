@@ -1,6 +1,7 @@
 import { gql, useMutation } from '@apollo/client';
 import useForm from '../lib/useForm';
 import DisplayError from './ErrorMessage';
+import ButtonStyles from './styles/ButtonStyles';
 
 const CREATE_EMAIL_MUTATION = gql`
   mutation CREATE_EMAIL_MUTATION(
@@ -46,6 +47,9 @@ export default function CaptureEmail() {
           >
             <fieldset disabled={loading} aria-busy={loading}>
               <div className="form__group">
+                {/* <label htmlFor="email" className="form__label">
+                  Email Address
+                </label>   */}
                 <input
                   type="email"
                   className="form__input"
@@ -56,14 +60,11 @@ export default function CaptureEmail() {
                   onChange={handleChange}
                   required
                 />
-                <label htmlFor="email" className="form__label">
-                  Email Address
-                </label>
               </div>
               <div className="form__group">
-                <button type="submit" className="btn btn--green">
+                <ButtonStyles type="submit" className="btn btn--white">
                   Subscribe &rarr;
-                </button>
+                </ButtonStyles>
               </div>
             </fieldset>
           </form>

@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
-import Footer from './Footer';
+import AdminNav from './AdminNav';
 import Nav from './Nav';
-
+import Footer from './Footer';
 import Search from './Search';
+import user from './User';
+import AdminOnly from './AdminOnly';
 
 const GlobalStyles = createGlobalStyle`
 /* NORMALIZING / CSS RESET */
@@ -221,9 +223,8 @@ const InnerStyles = styled.div`
  position: relative;
   min-height: 100vh;
   h1 {
-    padding-top: 10rem;
+    padding-top: 5rem;
   }
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,7 +235,7 @@ const InnerStyles = styled.div`
     color: white;
     text-decoration: none;
   }
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background-image: url('https://images.unsplash.com/photo-1525711857929-4272fb4a040f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
   background-size: cover;
@@ -295,13 +296,21 @@ const InnerStyles = styled.div`
 
 `;
 
+const ContentStyles = styled.div`
+  min-height: 85vh;
+`;
+
 export default function Page({ children }) {
   return (
     <div>
       <GlobalStyles />
       <InnerStyles>
+        <AdminOnly>
+          <AdminNav />
+        </AdminOnly>
+
         <Nav />
-        {children}
+        <ContentStyles>{children}</ContentStyles>
         <Footer></Footer>
       </InnerStyles>
     </div>

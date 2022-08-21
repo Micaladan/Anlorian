@@ -33,7 +33,7 @@ export default function Nav() {
           <li>
             <Link href="/">
               <a onClick={uncheck} className="navigation__brand">
-                Anlorian
+                A
               </a>
             </Link>
           </li>
@@ -117,6 +117,11 @@ export default function Nav() {
               </li>
             </>
           )}
+          <li>
+            <span>
+              <label for="navi-toggle">X</label>
+            </span>
+          </li>
         </ul>
       </nav>
     </NavStyles>

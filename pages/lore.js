@@ -8,6 +8,7 @@ const LoreContainerStyles = styled.main`
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  min-height: 85vh;
   width: 100vw;
   background: white;
   color: black;
@@ -53,7 +54,9 @@ export default function lore() {
   }
 
   function handleContentChangeToGeneral() {
-    setContent('Here is the general page.');
+    setContent(
+      'Here is the general page. Here is what you see when you are logged in but not an admin.'
+    );
   }
 
   return (

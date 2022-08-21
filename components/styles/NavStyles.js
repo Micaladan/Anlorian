@@ -7,27 +7,23 @@ const NavStyles = styled.ul`
   background-color: var(--color-black);
 
   @media only screen and (max-width: 600px) {
-  font-size: 50%;
-    }
+    font-size: 75%;
   }
 
   .navigation__brand {
     font-family: 'Shojumaru', cursive;
     color: var(--color-primary);
     background-color: white;
-    padding: 1rem;
-    font-size: 3rem;
-    border-radius: 35%;
+    font-size: 150%;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
     box-shadow: 0px 3rem 2.5rem -1.5rem #000000,
       1rem 1rem 3rem 1rem rgba(0, 0, 0, 0);
 
-      @media only screen and (max-width: 600px) {
-  font-size: 75%;
-  padding: 0.75rem;
+    @media only screen and (max-width: 600px) {
+      font-size: 275%;
     }
-
   }
-
 
   ul {
     display: flex;
@@ -40,6 +36,9 @@ const NavStyles = styled.ul`
   .navigation__checkbox {
     display: none;
   }
- `;
+
+  .navigation__checkbox:checked ~ {
+  }
+`;
 
 export default NavStyles;

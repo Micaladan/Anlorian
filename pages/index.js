@@ -8,7 +8,7 @@ export default function Home() {
           <span className="heading-primary--main">Anlorian </span>
           <span className="heading-primary--sub">Hardcore Tabletop RPG</span>
         </h1>
-        <p>
+        <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
           nostrum natus dolore quod, fuga tempore architecto voluptates
           perferendis aspernatur quam, vel praesentium et repudiandae magnam
@@ -120,7 +120,7 @@ export default function Home() {
           autem ad. Cupiditate, quo. Praesentium, officia explicabo. Quos, error
           deserunt quisquam enim ex magni fuga accusamus necessitatibus dolorem.
           Odio aperiam omnis nobis.
-        </p>
+        </div>
       </div>
     </ContainerStyles>
   );

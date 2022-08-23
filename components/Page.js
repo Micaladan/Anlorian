@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
-import AdminNav from './AdminNav';
 import Nav from './Nav';
 import Footer from './Footer';
 import Search from './Search';
 import user from './User';
+import AdminNav from './AdminNav';
 import AdminOnly from './AdminOnly';
 
 const GlobalStyles = createGlobalStyle`
@@ -22,6 +22,7 @@ body {
   font-weight: 400;
   font-size: 1.3125rem;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 body,
@@ -70,6 +71,57 @@ section {
     }
   }
 }
+
+ // Scrollbar
+
+  // Controls Entire Scrollbar
+  ::-webkit-scrollbar {
+    width: 1.4rem;
+  }
+  // 
+  ::-webkit-scrollbar-track {
+    
+   
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.3);
+  background-color: var(--color-black);
+  }
+
+  ::-webkit-scrollbar-thumb {
+  border: 0.25rem, solid, var(--color-black);
+    background-color: var(--color-primary-dark); 
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                        transparent 25%,
+                        transparent 50%,
+                        rgba(255, 255, 255, .2) 50%,
+                        rgba(255, 255, 255, .2) 75%,
+                        transparent 75%,
+                        transparent)
+  
+}
+
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-primary); 
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                        transparent 25%,
+                        transparent 50%,
+                        rgba(255, 255, 255, .2) 50%,
+                        rgba(255, 255, 255, .2) 75%,
+                        transparent 75%,
+                        transparent)
+  }
+
+  // Firefox scrollbar
+  @supports (scrollbar-color: red black) {
+    * {
+      scrollbar-color: var(--color-black) black;
+      scrollbar-width: auto;
+    }
+  }
+
 
 .container {
   margin-inline: auto;
@@ -220,7 +272,7 @@ fieldset {
 `;
 
 const InnerStyles = styled.div`
- position: relative;
+  position: relative;
   min-height: 100vh;
   h1 {
     padding-top: 5rem;
@@ -242,58 +294,6 @@ const InnerStyles = styled.div`
   background-position: top;
   background-attachment: fixed;
   overflow-x: hidden;
-  
-
-  // Scrollbar
-
-  // Controls Entire Scrollbar
-::-webkit-scrollbar {
-    width: 1.5rem;
-  }
-  // 
-  ::-webkit-scrollbar-track {
-    
-   
-    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.3);
-  background-color: var(--color-black);
-  }
-
-  ::-webkit-scrollbar-thumb {
-  border: 0.25rem, solid, var(--color-black);
-    background-color: var(--color-primary-dark); 
-  background-image: -webkit-linear-gradient(45deg,
-                                            rgba(255, 255, 255, .2) 25%,
-                        transparent 25%,
-                        transparent 50%,
-                        rgba(255, 255, 255, .2) 50%,
-                        rgba(255, 255, 255, .2) 75%,
-                        transparent 75%,
-                        transparent)
-  
-}
-
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--color-primary); 
-  background-image: -webkit-linear-gradient(45deg,
-                                            rgba(255, 255, 255, .2) 25%,
-                        transparent 25%,
-                        transparent 50%,
-                        rgba(255, 255, 255, .2) 50%,
-                        rgba(255, 255, 255, .2) 75%,
-                        transparent 75%,
-                        transparent)
-  }
-
-  // Firefox scrollbar
-  @supports (scrollbar-color: red black) {
-    * {
-      scrollbar-color: var(--color-black) black;
-      scrollbar-width: auto;
-    }
-  }
-
 `;
 
 const ContentStyles = styled.div`
@@ -305,11 +305,11 @@ export default function Page({ children }) {
     <div>
       <GlobalStyles />
       <InnerStyles>
+        <Nav />
         <AdminOnly>
           <AdminNav />
         </AdminOnly>
 
-        <Nav />
         <ContentStyles>{children}</ContentStyles>
         <Footer></Footer>
       </InnerStyles>

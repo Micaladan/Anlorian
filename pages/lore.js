@@ -12,6 +12,14 @@ const LoreContainerStyles = styled.main`
   width: 100vw;
   background: white;
   color: black;
+  justify-content: center;
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 `;
 
 const LoreSideBarStyles = styled.nav`
@@ -19,20 +27,38 @@ const LoreSideBarStyles = styled.nav`
   height: 100%;
   text-align: left;
   grid-area: 1 / 1 / 2 / 3;
-  padding-left: 1rem;
+  background-color: var(--color-black);
+  color: var(--color-primary);
+
+  li {
+    display: flex;
+  }
+
+  li button {
+    height: 100%;
+  }
+
+  ul li:hover {
+    color: var(--color-black);
+    background-color: var(--color-primary);
+  }
 `;
 
 const LoreContentStyles = styled.div`
   grid-area: 1 / 2 / 2 / 3;
 `;
 
-const NavButtonStyles = styled.button`
+const NavButtonStyles = styled.li`
   border: none;
-  background: none;
+  height: max-content;
+
   color: var(--color-primary);
+  background-color: var(--color-dark);
+  font-size: 2rem;
   :hover,
   :focus {
     cursor: pointer;
+    color: var(--color-dark);
   }
 `;
 
@@ -40,6 +66,7 @@ export default function lore() {
   const [content, setContent] = useState('Here is the general page.');
   const user = useUser();
 
+  // Clicking Continents
   function handleContentChangeToContinents() {
     setContent(
       <div>
@@ -53,6 +80,7 @@ export default function lore() {
     );
   }
 
+  // Clicking General
   function handleContentChangeToGeneral() {
     setContent(
       'Here is the general page. Here is what you see when you are logged in but not an admin.'
@@ -60,36 +88,30 @@ export default function lore() {
   }
 
   return (
-    <div>
+    <LoreContainerStyles>
       {!user && (
         <p style={{ height: '85vh' }}>Welcome to the non-logged in Lore Page</p>
       )}
       {user && (
         <>
-          <LoreContainerStyles>
-            <LoreSideBarStyles>
-              <ul>
-                <li>
-                  <NavButtonStyles onClick={handleContentChangeToGeneral}>
-                    General
-                  </NavButtonStyles>
-                </li>
-                <li>Timeline</li>
-                <li>Characters</li>
-                <li>
-                  <NavButtonStyles onClick={handleContentChangeToContinents}>
-                    Continents
-                  </NavButtonStyles>
-                </li>
-                <li>Arcs</li>
-                <li>Scenes</li>
-              </ul>
-            </LoreSideBarStyles>
+          <LoreSideBarStyles>
+            <ul>
+              <NavButtonStyles onClick={handleContentChangeToGeneral}>
+                General
+              </NavButtonStyles>
+              <li>Timeline</li>
+              <li>Characters</li>
+              <NavButtonStyles onClick={handleContentChangeToContinents}>
+                Continents
+              </NavButtonStyles>
+              <li>Arcs</li>
+              <li>Scenes</li>
+            </ul>
+          </LoreSideBarStyles>
 
-            <LoreContentStyles>{content}</LoreContentStyles>
-          </LoreContainerStyles>
+          <LoreContentStyles>{content}</LoreContentStyles>
         </>
       )}
-    </div>
+    </LoreContainerStyles>
   );
 }

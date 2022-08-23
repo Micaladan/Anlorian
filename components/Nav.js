@@ -15,115 +15,124 @@ export default function Nav() {
   const { toggleCart } = useCart();
 
   return (
-    <NavStyles className="navigation">
-      <input
-        type="checkbox"
-        className="navigation__checkbox"
-        id="navi-toggle"
-      />
-      <label
-        htmlFor="navi-toggle"
-        className="navigation__button navigation__background"
-      >
-        <span className="navigation__icon"></span>
-      </label>
-      <div className="navigation__background"></div>
-      <nav className="navigation__nav">
-        <ul className="navigation__list">
-          <li>
-            <Link href="/">
-              <a onClick={uncheck} className="navigation__brand">
-                A
-              </a>
-            </Link>
-          </li>
-          <li className="navigation__item">
-            <Link href="/about">
-              <a onClick={uncheck} role="link" className="focus">
-                About Anlorian
-              </a>
-            </Link>
-          </li>
+    <>
+      <NavStyles className="navigation">
+        <div className="navigation__background"></div>
+        <nav className="navigation__nav">
+          <input
+            type="checkbox"
+            className="navigation__checkbox"
+            id="navi-toggle"
+          />
+          <label
+            htmlFor="navi-toggle"
+            className="navigation__button navigation__background"
+          >
+            <span className="navigation__icon"></span>
+          </label>
 
-          <li className="navigation__item">
-            <Link href="/contact">
-              <a onClick={uncheck} className="focus">
-                Contact Us
-              </a>
-            </Link>
-          </li>
-          {/* Show these only if logged in */}
-          {user && (
-            <>
-              <li className="navigation__item">
-                <Link href="/lore">
-                  <a onClick={uncheck} role="link" className="focus">
-                    Lore
-                  </a>
-                </Link>
+          <ul className="navigation__main-list">
+            <li>
+              <Link href="/">
+                <a onClick={uncheck} className="navigation__brand">
+                  Anlorian
+                </a>
+              </Link>
+            </li>
+            <label for="navi-toggle">
+              <li className="hamburgerContainer">
+                <span className="hamburger"></span>
               </li>
-              <li className="navigation__item">
-                <Link href="/products">
-                  <a onClick={uncheck} role="link" className="focus">
-                    Products
-                  </a>
-                </Link>
-              </li>
-              <li className="navigation__item">
-                <Link href="/feedback">
-                  <a
-                    title="Give Us Feedback"
-                    onClick={uncheck}
-                    className="tooltip focus"
-                  >
-                    <FontAwesomeIcon icon="fa-solid fa-bullhorn" />
-                  </a>
-                </Link>
-              </li>
-              <li className="navigation__item">
-                <Link href="#">
-                  <a
-                    title="Toggle Cart"
-                    onClick={toggleCart}
-                    className="tooltip focus"
-                  >
-                    <div className="flex">
-                      <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
-                      <CartCount
-                        count={user.cart.reduce(
-                          (tally, cartItem) =>
-                            tally + (cartItem.product ? cartItem.quantity : 0),
-                          0
-                        )}
-                      />
-                    </div>
-                  </a>
-                </Link>
-              </li>
-              <li className="navigation__item">
-                <SignOut></SignOut>
-              </li>
-            </>
-          )}
-          {/* Show this if not logged in */}
-          {!user && (
-            <>
-              <li className="navigation__item">
-                <Link href="/signin">
-                  <a onClick={uncheck} className="focus">
-                    Sign In / Register
-                  </a>
-                </Link>
-              </li>
-            </>
-          )}
-          <li>
-            <span>
-              <label for="navi-toggle">X</label>
-            </span>
-          </li>
-        </ul>
-      </nav>
-    </NavStyles>
+            </label>
+          </ul>
+
+          <ul className="navigation__list">
+            <li className="navigation__item">
+              <Link href="/about">
+                <a onClick={uncheck} role="link" className="focus">
+                  About Anlorian
+                </a>
+              </Link>
+            </li>
+
+            <li className="navigation__item">
+              <Link href="/contact">
+                <a onClick={uncheck} className="focus">
+                  Contact Us
+                </a>
+              </Link>
+            </li>
+            {/* Show these only if logged in */}
+            {user && (
+              <>
+                <li className="navigation__item">
+                  <Link href="/lore">
+                    <a onClick={uncheck} role="link" className="focus">
+                      Lore
+                    </a>
+                  </Link>
+                </li>
+                <li className="navigation__item">
+                  <Link href="/products">
+                    <a onClick={uncheck} role="link" className="focus">
+                      Products
+                    </a>
+                  </Link>
+                </li>
+                <li className="navigation__item">
+                  <Link href="/feedback">
+                    <a
+                      title="Give Us Feedback"
+                      onClick={uncheck}
+                      className="tooltip focus"
+                    >
+                      <FontAwesomeIcon icon="fa-solid fa-bullhorn" />
+                      &nbsp; Feedback
+                    </a>
+                  </Link>
+                </li>
+                <li className="navigation__item">
+                  <Link href="#">
+                    <a
+                      title="Toggle Cart"
+                      onClick={toggleCart}
+                      className="tooltip focus"
+                    >
+                      <div className="flex">
+                        <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+                        &nbsp; Cart
+                        <CartCount
+                          count={user.cart.reduce(
+                            (tally, cartItem) =>
+                              tally +
+                              (cartItem.product ? cartItem.quantity : 0),
+                            0
+                          )}
+                        />
+                      </div>
+                    </a>
+                  </Link>
+                </li>
+                <li className="navigation__item">
+                  <SignOut></SignOut> &nbsp; Sign Out
+                </li>
+              </>
+            )}
+            {/* Show this if not logged in */}
+            {!user && (
+              <>
+                <li className="navigation__item">
+                  <Link href="/signin">
+                    <a onClick={uncheck} className="focus">
+                      Sign In / Register
+                    </a>
+                  </Link>
+                </li>
+              </>
+            )}
+          </ul>
+        </nav>
+      </NavStyles>
+    </>
   );
 }

@@ -306,9 +306,6 @@ export default function Page({ children }) {
       <GlobalStyles />
       <InnerStyles>
         <Nav />
-        <AdminOnly>
-          <AdminNav />
-        </AdminOnly>
 
         <ContentStyles>{children}</ContentStyles>
         <Footer></Footer>

@@ -8,12 +8,12 @@ const LoreContainerStyles = styled.main`
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  min-height: 85vh;
+  min-height: 90vh;
+  margin-top: 10vh;
   width: 100vw;
   background: white;
   color: black;
   justify-content: center;
-
   img {
     display: block;
     margin-left: auto;

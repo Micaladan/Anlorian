@@ -199,6 +199,7 @@ html {
 
 body {
   box-sizing: border-box;
+  overscroll-behavior: none;
 }
 
 fieldset {

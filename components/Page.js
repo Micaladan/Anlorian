@@ -261,11 +261,12 @@ fieldset {
 
 .focus:hover:before{
   border: solid;
-  border-color: #FFF transparent;
-  border-width: 12px 6px 0 6px;
+  border-color: transparent #FFF ;
+  border-width: 6px 0px 6px 12px;
   content: "";
-  left: 45%;
-  bottom: 30px;
+  left: -3rem;
+  top: 0.75rem;
+  
   position: absolute;
 }
 
@@ -298,6 +299,7 @@ const InnerStyles = styled.div`
 
 const ContentStyles = styled.div`
   min-height: 85vh;
+  margin-top: 10vh;
 `;
 
 export default function Page({ children }) {

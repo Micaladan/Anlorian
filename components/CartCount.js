@@ -2,6 +2,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 
 const Dot = styled.div`
+  display: inline;
   background: white;
   color: black;
   float: right;
@@ -21,6 +22,8 @@ const AnimationStyles = styled.span`
   .count {
     display: block;
     position: absolute;
+    top: 0;
+    right: -5rem;
     transition: transform 0.4s;
     backface-visibility: hidden;
   }

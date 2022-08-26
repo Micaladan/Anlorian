@@ -22,7 +22,7 @@ export default function SignOut() {
   }
   return (
     <Link href="/">
-      <a title="Sign Out" onClick={handleSignOut} className="tooltip focus">
+      <a title="Sign Out" onClick={handleSignOut} className="tooltip ">
         <FontAwesomeIcon icon="fa-solid fa-door-open" />
       </a>
     </Link>

@@ -10,7 +10,7 @@ width: 100vw;
   height: 10vh;
   position: relative;
 }
-  
+ 
 
 // Hamburger Menu
 .hamburger, .hamburger::before, .hamburger::after {
@@ -54,9 +54,6 @@ width: 100vw;
        .navigation__list {
       display: none;
 
-    .hamburger {
- 
-    }
     }
  
   .navigation__brand {
@@ -104,10 +101,15 @@ width: 100vw;
   // What to do when hamburger engaged:
   .navigation__checkbox:checked ~ .navigation__list {
     height: 90vh;
+    
+    @media only screen and (max-width: 600px) {
+      font-size: 3.5rem;
+    }
 
    li {
     display: block;
-   }
+    }
+
 
     .navigation__brand {
       transform: translateX(-25%);
@@ -129,6 +131,8 @@ width: 100vw;
       transform:   translate(0px, -6px) rotate(-45deg);
     }
   }
+
+
 `;
 
 export default NavStyles;

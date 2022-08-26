@@ -33,7 +33,7 @@ export default function Nav() {
 
           <ul className="navigation__main-list">
             <li>
-              <Link href="/">
+              <Link href="/" className="focus">
                 <a onClick={uncheck} className="navigation__brand">
                   Anlorian
                 </a>
@@ -47,8 +47,8 @@ export default function Nav() {
           </ul>
 
           <ul className="navigation__list">
-            <li className="navigation__item">
-              <Link href="/about">
+            <li>
+              <Link href="/about" className="navigation__item">
                 <a onClick={uncheck} role="link" className="focus">
                   About Anlorian
                 </a>
@@ -84,7 +84,7 @@ export default function Nav() {
                     <a
                       title="Give Us Feedback"
                       onClick={uncheck}
-                      className="tooltip focus"
+                      className="focus tooltip"
                     >
                       <FontAwesomeIcon icon="fa-solid fa-bullhorn" />
                       &nbsp; Feedback
@@ -96,24 +96,21 @@ export default function Nav() {
                     <a
                       title="Toggle Cart"
                       onClick={toggleCart}
-                      className="tooltip focus"
+                      className="focus tooltip"
                     >
-                      <div className="flex">
-                        <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
-                        &nbsp; Cart
-                        <CartCount
-                          count={user.cart.reduce(
-                            (tally, cartItem) =>
-                              tally +
-                              (cartItem.product ? cartItem.quantity : 0),
-                            0
-                          )}
-                        />
-                      </div>
+                      <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+                      &nbsp; Cart
+                      <CartCount
+                        count={user.cart.reduce(
+                          (tally, cartItem) =>
+                            tally + (cartItem.product ? cartItem.quantity : 0),
+                          0
+                        )}
+                      />
                     </a>
                   </Link>
                 </li>
-                <li className="navigation__item">
+                <li className="navigation__item focus">
                   <SignOut></SignOut> &nbsp; Sign Out
                 </li>
               </>
@@ -130,6 +127,7 @@ export default function Nav() {
                 </li>
               </>
             )}
+            <li></li>
           </ul>
         </nav>
       </NavStyles>

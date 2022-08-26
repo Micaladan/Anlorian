@@ -190,11 +190,6 @@ html {
   font-size: 50%; // 1 rem = 8 px, 8/16p = 50%
     }
 
-    // Small devices (portrait tablets and large phones, 600px and up)
-@media only screen and (min-width: 600px) {
-  font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
-}
-
 // Extra large devices (large laptops and desktops, 1200px and up) 
 @media only screen and (min-width: 1200px) {
   font-size: 75%; // 1rem = 12px, 12/16 = 75%  

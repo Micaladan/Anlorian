@@ -10,7 +10,7 @@ width: 100vw;
   height: 10vh;
   position: relative;
 }
- 
+  
 
 // Hamburger Menu
 .hamburger, .hamburger::before, .hamburger::after {
@@ -102,7 +102,7 @@ width: 100vw;
   .navigation__checkbox:checked ~ .navigation__list {
     height: 90vh;
     
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 1200px) {
       font-size: 3.5rem;
     }
 

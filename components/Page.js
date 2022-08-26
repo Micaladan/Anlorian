@@ -293,7 +293,7 @@ const InnerStyles = styled.div`
 `;
 
 const ContentStyles = styled.div`
-  min-height: 85vh;
+  min-height: 90vh;
   margin-top: 10vh;
 `;
 

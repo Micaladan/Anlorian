@@ -26,7 +26,6 @@ width: 100vw;
     }
 
     .hamburgerContainer {
-      border: 1px solid var(--color-primary);
       position: absolute;
       top: 25%;
       right: 2rem;

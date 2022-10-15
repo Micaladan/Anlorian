@@ -286,8 +286,12 @@ const InnerStyles = styled.div`
   }
   height: 100%;
   width: 100vw;
-  background-image: url('https://images.unsplash.com/photo-1525711857929-4272fb4a040f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
-  background-size: cover;
+  background: var(--color-primary);
+  background: radial-gradient(
+    circle,
+    var(--color-primary-dark) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
   background-position: top;
   background-attachment: fixed;
   overflow-x: hidden;

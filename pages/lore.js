@@ -1,6 +1,18 @@
+import gql from 'graphql-tag';
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useQuery } from '@apollo/client';
 import { useUser } from '../components/User';
+
+const ALL_LORES_QUERY = gql`
+  query ALL_LORES_QUERY {
+    allLores {
+      id
+      loreSideBarLabel
+      content
+    }
+  }
+`;
 
 const LoreContainerStyles = styled.main`
   display: grid;
@@ -50,6 +62,7 @@ const LoreContentStyles = styled.div`
 const NavButtonStyles = styled.li`
   border: none;
   height: max-content;
+  justify-content: center;
 
   color: var(--color-primary);
   background-color: var(--color-dark);
@@ -62,39 +75,43 @@ const NavButtonStyles = styled.li`
 `;
 
 export default function lore() {
+  const { data, error, loading } = useQuery(ALL_LORES_QUERY);
+
   const [content, setContent] = useState('Here is the general page.');
   const user = useUser();
+  console.log(data, error, loading);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   // Clicking Continents
-  function handleContentChangeToContinents() {
-    setContent(
-      <div>
-        <p>'Learn about Anlorian continents!'</p>
-        <img
-          width="90%"
-          src="https://res.cloudinary.com/dukyauo4n/image/upload/v1659835451/Anlorian/AnlorianMap_y8ycwt.jpg"
-          alt="Anlorian World Map"
-        />
-      </div>
-    );
-  }
-
-  // Clicking General
-  function handleContentChangeToGeneral() {
-    setContent(
-      'Here is the general page. Here is what you see when you are logged in but not an admin.'
-    );
+  function handleContentChangeTo(e) {
+    setContent(<>{e}</>);
   }
 
   return (
     <LoreContainerStyles>
       {!user && (
-        <p style={{ height: '85vh' }}>Welcome to the non-logged in Lore Page</p>
+        <p style={{ height: '90vh' }}>Welcome to the non-logged in Lore Page</p>
       )}
       {user && (
         <>
           <LoreSideBarStyles>
             <ul>
+              {data.allLores.map((lore) => (
+                <NavButtonStyles
+                  key={lore.id}
+                  onClick={() => {
+                    handleContentChangeTo(`${lore.content}`);
+                  }}
+                >
+                  {lore.loreSideBarLabel}
+                </NavButtonStyles>
+              ))}
+              <NavButtonStyles>
+                <strong>+</strong>
+              </NavButtonStyles>
+            </ul>
+            {/* <ul>
               <NavButtonStyles onClick={handleContentChangeToGeneral}>
                 General
               </NavButtonStyles>
@@ -103,9 +120,12 @@ export default function lore() {
               <NavButtonStyles onClick={handleContentChangeToContinents}>
                 Continents
               </NavButtonStyles>
+              <NavButtonStyles onClick={handleContentChangeToPedesteria}>
+                Pedesteria
+              </NavButtonStyles>
               <li>Arcs</li>
               <li>Scenes</li>
-            </ul>
+            </ul> */}
           </LoreSideBarStyles>
 
           <LoreContentStyles>{content}</LoreContentStyles>
